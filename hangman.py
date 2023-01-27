@@ -31,7 +31,7 @@ class Hangman:
 
   def ask_for_input(self):
     while(True):
-      guess = input("Please enter a single letter")
+      guess = input("Please enter a single letter: ")
       if len(guess)>1:
         print("Invalid letter. Please, enter a single alphabetical character.")
       elif guess in self.list_of_guesses:
