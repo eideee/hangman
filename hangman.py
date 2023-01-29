@@ -57,6 +57,7 @@ def play_game():
       break
     else:
       break
-
-play_game()
+#%%
+if __name__ == '__main__':
+  play_game()
 # %%
