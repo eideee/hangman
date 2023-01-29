@@ -16,7 +16,7 @@ Familiarised with Git commans and GitHub platform
 
 
 
-## Milestone 3 - Check if the guessed character is in the word
+## 3 - Check if the guessed character is in the word
 
 ### Iteratively check if the input is a valid guess
 
@@ -45,17 +45,5 @@ The ask_for_input function will iteratively check if the guessed letter exist in
 
 ### Code the logic of the game
 
-
-### Heading 2
-#### Heading 3
-##### Heading 4
-
-- satu
-    - satu satu
-- dua
-- tiga
-
-1. lagi satu
-2. lagi dua
 
 
