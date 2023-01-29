@@ -24,7 +24,7 @@ The game should prompt the player that he or she could only enter one letter at 
 
 ![asked the user to enter only one letter](https://user-images.githubusercontent.com/53040471/215342083-0ee04777-c824-4af5-864a-e4dbaa2dae27.jpg)
 ### Check whether the guess is in the word
-The game should continue to run in a loop until the number of lifes are utilised or the player managed to guess the word, which ever comes first. 
+The game should continue to run in a loop until the number of lives are utilised or the player managed to guess the word, which ever comes first. 
 
 If the guessed letter is correct, the game should prompt te player accordingly and display the locations of the guessed letter in the word.
 
@@ -33,48 +33,64 @@ If the guessed letter is correct, the game should prompt te player accordingly a
 
 ### Create functions to run the checks
 
-
-check_guess and ask_for_input functions were created to group block of codes.
+Blocks of related codes were grouped into functions. 
 
 The check_guess function will take the guessed letter as an argument and check if the letter is in the word. The function will first convert the guesses word to be in lower case.
 
 The ask_for_input function will iteratively check if the guessed letter exist inside a word. It will also perform nested function as the check_guess function is being called internally.
 
-Good job so far! But your code probably doesn't look great. It's hard to tell which lines do what.
-
-Create 2 functions, check_guess and ask_for_input functions which contain the code for those two things.
-
-The check_guess function will take the guessed letter as an argument and check if the letter is in the word.
-
-Step 1: Define a function called check_guess. pass in the guess as a parameter for the function. Write the code for the following steps in the body of this function.
-
-Step 2: Convert the guess into lower case.
-
-Step 3. Move the code that you wrote to check if the guess is in the word into this function block.
-
-The ask_for_input function.
-
-Step 1. Define a function called ask_for_input.
-
-Step 2. Move the code that you wrote in the Iteratively check if the input is a valid guess task into this function block.
-
-Step 3. Outside the while loop, but within this function, call the check_guess function to check if the guess is in the word. Don't forget to pass in the guess as an argument to the method.
-
-Step 4. Outside the function, call the ask_for_input function to test your code.
-
 ## 4 - Create the Game class
 
 ### Create the class
+Hangman class was created to further structure the codes for the game. The class has the following attributes:
+
+1. word: The word to be guessed, picked randomly from the word_list. The random library was imported at the beginning of the script.
+2. word_guessed: list - A list of the letters of the word, with _ for each letter not yet guessed. For example, if the word is 'apple', the word_guessed list would be ['_', '_', '_', '_', '_']. If the player guesses 'a', the list would be ['a', '_', '_', '_', '_'].
+3. num_letters: int - The number of UNIQUE letters in the word that have not been guessed yet.
+
+![user cannot continue to enter the same letter](https://user-images.githubusercontent.com/53040471/215347845-addeb5bd-4236-4e7d-a511-bb90d94fac6a.jpg)
+
+4. num_lives: int - The number of lives the player has at the start of the game.
+5. word_list: list - A list of words.
+6. list_of_guesses: list - A list of the guesses that have already been tried. The list was set to an empty list initially.
+
+![inform the user in case the following guess was wrong n update the lifes left ii](https://user-images.githubusercontent.com/53040471/215347989-0e0f2801-616c-4db9-80aa-f3b53375b1f9.jpg)
+
 
 ### Create methods for running the checks
 
 ### Define what happens if the letter is in the word
+Should the guessed letter is in the word, the code would display the location of the gussed word.
+
+![program will display all locations of the letter if the letter is in the word](https://user-images.githubusercontent.com/53040471/215347921-e03e8587-a86e-4fb0-a657-79a2975a403e.jpg)
+
+![program will display all locations of the letter if the letter is in the word ii](https://user-images.githubusercontent.com/53040471/215347924-0b5bedbf-b030-4221-b00a-472d8b133f5b.jpg)
 
 ### Define what happens if the letter is NOT in the word
+Upon an incorrect input, the game would:
+
+1. Reduce `num_lives' by 1.
+2. Print a message saying "Sorry, {letter} is not in the word."
+3. Print another message saying "You have {num_lives} lives left."
+
+![inform the user in case the following guess was wrong n update the lifes left](https://user-images.githubusercontent.com/53040471/215347992-4d856b90-28d8-4205-99a7-c10708f31449.jpg)
+
+The user is not allowed to enter the same character.
+
+![user cannot continue to enter the same letter](https://user-images.githubusercontent.com/53040471/215355876-994bd7c6-f186-4541-ab6b-c4c35a2d734a.jpg)
+
+If the player exceeded the five wrong attempts, the game would end and declare that the player has just lost the game.
+
+![all attemps were wrong acknowledge that game is over](https://user-images.githubusercontent.com/53040471/215355943-faf0828a-0ff3-4e51-b456-9abb1c272f5a.jpg)
 
 ## 5 - Putting it all together
 
 ### Code the logic of the game
+Rearranged the codes to include the class and functions at the start, then place the call to a function to start the game at the very end. For successful gusses and attempts within the allowable number of lives, the player will be acknowledged as the winner.
+
+![upon correct guess acknowledge the winner ii](https://user-images.githubusercontent.com/53040471/215355804-5cf1687e-e6ec-4ded-a8d9-a548f212f03b.jpg)
+
+![upon correct guess acknowledge the winner](https://user-images.githubusercontent.com/53040471/215355806-d952bdfc-8cb9-41ff-83d5-4be2841ff747.jpg)
 
 
 
