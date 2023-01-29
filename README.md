@@ -47,9 +47,6 @@ Hangman class was created to further structure the codes for the game. The class
 1. word: The word to be guessed, picked randomly from the word_list. The random library was imported at the beginning of the script.
 2. word_guessed: list - A list of the letters of the word, with _ for each letter not yet guessed. For example, if the word is 'apple', the word_guessed list would be ['_', '_', '_', '_', '_']. If the player guesses 'a', the list would be ['a', '_', '_', '_', '_'].
 3. num_letters: int - The number of UNIQUE letters in the word that have not been guessed yet.
-
-![user cannot continue to enter the same letter](https://user-images.githubusercontent.com/53040471/215347845-addeb5bd-4236-4e7d-a511-bb90d94fac6a.jpg)
-
 4. num_lives: int - The number of lives the player has at the start of the game.
 5. word_list: list - A list of words.
 6. list_of_guesses: list - A list of the guesses that have already been tried. The list was set to an empty list initially.
